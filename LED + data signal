@@ -1,0 +1,71 @@
+// Set pin (2~11)
+#define DATA 3 // DO/RX
+#define CLK 2 // CK/TX 
+#include<SPI.h>
+#include<SD.h>
+#include<arduino.h>
+#include<SoftwareSerial.h>
+
+SoftwareSerial soft_serial(9,8);
+
+const int chipSelect = 4;
+//to use simple function
+#define reader  digitalRead(DATA)
+#define High digitalWrite(CLK,HIGH) // CLK HIGH
+#define Low digitalWrite(CLK,LOW) // CLK LOW
+
+unsigned long raw; // 24bit Load sell
+int i;
+unsigned long val;
+signed int rval;
+char buf[20];
+
+void setup(){ 
+ Serial.begin(9600);
+ soft_serial.begin(9600);
+ pinMode(DATA, INPUT);
+ pinMode(CLK, OUTPUT);
+ digitalWrite(DATA,HIGH); 
+
+ Serial.print("Initializing SD CARD . . . ");
+
+ if(!SD.begin(chipSelect)){
+  Serial.println("CARD FAILED! or NOT PRESENT!");
+  return;
+ }
+ Serial.println("Card initialzied!!!");
+}
+void loop(){
+  File dataFile = SD.open("datalog.txt", FILE_WRITE);
+  
+  digitalWrite(DATA,HIGH);
+  High; // CLK HIGH
+  raw = 0; 
+ //while(reader==HIGH);
+  raw=reader;
+  for(i=0;i<24;i++){ // Read 24Bit data
+    High; // CLK High 
+    raw <<= 1;
+    Low; // CLK LOW
+    if(reader) raw++;
+  }
+  High; // CLK High 
+//  delay(1);
+  Low; // CLK LOW
+  
+  val = raw; // put raw data to val 
+  rval=(val>>8) & 0xffff; // change from the 24bit to 16bit
+  sprintf(buf,"%d",rval+360);
+  //Serial.print("Weight : ");
+  Serial.println(buf);
+  if( dataFile){
+    soft_serial.println(rval+360);
+    dataFile.println(rval+360);
+    dataFile.close();
+  }
+  else{
+    soft_serial.println("NO CONNECTED");
+    Serial.println("ERROR OPENING");
+  }
+  delay(50);
+}
