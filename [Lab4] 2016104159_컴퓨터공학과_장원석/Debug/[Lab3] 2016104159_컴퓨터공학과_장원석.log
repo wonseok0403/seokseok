@@ -1,0 +1,41 @@
+﻿  UserInterface.cpp
+c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\userinterface.cpp(244): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+  Server.cpp
+c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\server.cpp(236): warning C4101: 'tmpId1' :참조되지 않은 지역 변수입니다.
+c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\server.cpp(236): warning C4101: 'tmpId2' :참조되지 않은 지역 변수입니다.
+c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\doublylist.cpp(16): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\doublylist.cpp(15): note: 클래스 템플릿 멤버 함수 'void DoublyList<FriendList>::addItem(T *)'을(를) 컴파일하고 있습니다.
+          with
+          [
+              T=FriendList
+          ]
+  c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\server.cpp(254): note: 컴파일 중인 함수 템플릿 인스턴스화 'void DoublyList<FriendList>::addItem(T *)'에 대한 참조를 확인하십시오.
+          with
+          [
+              T=FriendList
+          ]
+  c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\user.h(29): note: 컴파일 중인 클래스 템플릿 인스턴스화 'DoublyList<FriendList>'에 대한 참조를 확인하십시오.
+  main.cpp
+  DoublyList.cpp
+  Client.cpp
+c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\client.cpp(271): warning C4101: 'idx' :참조되지 않은 지역 변수입니다.
+c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\doublylist.cpp(16): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\doublylist.cpp(15): note: 클래스 템플릿 멤버 함수 'void DoublyList<Chat>::addItem(T *)'을(를) 컴파일하고 있습니다.
+          with
+          [
+              T=Chat
+          ]
+  c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\client.cpp(66): note: 컴파일 중인 함수 템플릿 인스턴스화 'void DoublyList<Chat>::addItem(T *)'에 대한 참조를 확인하십시오.
+          with
+          [
+              T=Chat
+          ]
+  c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\server.h(22): note: 컴파일 중인 클래스 템플릿 인스턴스화 'DoublyList<Chat>'에 대한 참조를 확인하십시오.
+  코드를 생성하고 있습니다...
+c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\doublylist.cpp(59): warning C4715: 'DoublyList<FriendList>::ToRightFindUserByID': 모든 제어 경로에서 값을 반환하지는 않습니다.
+c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\doublylist.cpp(59): warning C4715: 'DoublyList<MemberType>::ToRightFindUserByID': 모든 제어 경로에서 값을 반환하지는 않습니다.
+c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\doublylist.cpp(77): warning C4715: 'DoublyList<Chat>::GetLastId': 모든 제어 경로에서 값을 반환하지는 않습니다.
+c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\doublylist.cpp(59): warning C4715: 'DoublyList<MemberType>::ToRightFindUserByID': 모든 제어 경로에서 값을 반환하지는 않습니다.
+c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\userinterface.cpp(152): warning C4715: 'PrintAfterFriendList': 모든 제어 경로에서 값을 반환하지는 않습니다.
+c:\users\장원석\documents\카카오톡 받은 파일\[lab4] 2016104159_컴퓨터공학과_장원석\userinterface.cpp(354): warning C4715: 'PrintShopInterface': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  [Lab3] 2016104159_컴퓨터공학과_장원석.vcxproj -> C:\Users\장원석\Documents\카카오톡 받은 파일\[Lab4] 2016104159_컴퓨터공학과_장원석\Debug\[Lab4] 2016104159_컴퓨터공학과_장원석.exe
